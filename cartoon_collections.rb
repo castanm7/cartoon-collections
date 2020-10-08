@@ -6,15 +6,27 @@ end
 
 def summon_captain_planet(planeteer_calls)
   planeteer_calls.map do |calls|
-    puts calls.capitalize
+    thing = calls.capitalize
+    puts = "#{thing}!"
   end
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+def long_planeteer_calls(calls_long)
+  calls_long.any? do |calls|
+  # calls.length >= 4
+  
+    if calls.length >= 4
+      return false
+    else 
+      return true
+    end
+  end
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+def find_the_cheese(list)
   cheese_types = ["cheddar", "gouda", "camembert"]
+  list.find do |i|
+    cheese_types.include?(i)
+    end
 end
+
